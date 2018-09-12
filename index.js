@@ -53,3 +53,11 @@ store.dispatch({
   type: "DECREMENT"
 });
 console.log("get the state after dispatch", store.getState());
+
+// *********** Dispatch with action using a function that returns an object
+function increment() {
+  return { type: "INCREMENT" };
+}
+
+store.dispatch(increment());
+console.log("get the state after dispatch", store.getState());
